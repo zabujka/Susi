@@ -15,21 +15,11 @@ header {
     left: 0;
     overflow-x: hidden;
     z-index: 1;
-    
-
-    /* 2 SPOSOB na wysrodkowanie logo KTORY SUPER DZIALA:
-    display: flex;
-    align-items: center;
-    justify-content: center;*/
 }
 
 header img.black {
     position: absolute;
-    height: 60%;  /*TAK USTALAMY WIELKOSC ZDJECIA */
-    /*FUNCKJA CALC - DZIALA ALE PRZY ZMIANIE WIELKOSCI STRONY, WSZYSTKO SIE PSUJE
-    top: calc(50% - 207px );
-    left: calc(50% - 173px); */
-
+    height: 60%;
     /* TRANSLATE */
     top: 50%;
     left: 50%;
@@ -62,15 +52,11 @@ img.vaca:hover {
     cursor: pointer;
 }
 
-/*.vaca:hover~onclick*/
-
-
 main {
     position: relative;
     margin-top: 100vh;
     display: flex;
     flex-direction: column;
-   /* max-height: 500vh;*/
     width: 100%;
     background-color: #E6BC78;
     z-index: 2;
@@ -84,17 +70,13 @@ h1 {
     color:  black;
 }
 section.gallery {
-    /*flex jako element elastyczny*/
     flex-grow: 1;
-    /*kontener flex */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
 }
-/*section.gallery>div {
-    flex-basis: 33%;
-}*/
+
 section div img {
     width: 100%;
     padding: 10px;
@@ -104,8 +86,8 @@ ul {
     position: relative;
     width: 100%;
     z-index:2;
-
 }
+
 li {
     display: inline-block;
     width: 25%;
@@ -138,7 +120,6 @@ div.instagram:hover {
     color: white;
     transition: all 0.2s ease;
 }
-
 
 @keyframes black {
     0% {
