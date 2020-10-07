@@ -15,11 +15,21 @@ header {
     left: 0;
     overflow-x: hidden;
     z-index: 1;
+    
+
+    /* 2 SPOSOB na wysrodkowanie logo KTORY SUPER DZIALA:
+    display: flex;
+    align-items: center;
+    justify-content: center;*/
 }
 
 header img.black {
     position: absolute;
-    height: 60%;
+    height: 60%;  /*TAK USTALAMY WIELKOSC ZDJECIA */
+    /*FUNCKJA CALC - DZIALA ALE PRZY ZMIANIE WIELKOSCI STRONY, WSZYSTKO SIE PSUJE
+    top: calc(50% - 207px );
+    left: calc(50% - 173px); */
+
     /* TRANSLATE */
     top: 50%;
     left: 50%;
@@ -37,20 +47,24 @@ p {
     left: calc(50% - 150px);
 }
 
-img.vaca {
+header img.little {
     position: absolute;
     top: 83%;
     left: 80%;
     height: 10%;
-    animation: krowka 3s linear, jumping 2s 3s infinite;
-    transition: 0.5s;
+    animation: krowka 3s linear, jumping 2s 2s infinite;
+    transition-duration: 0.5s;
 }
 
-img.vaca:hover {
+header img.little:hover {
     /* NIE DZIALA POWIEKSZENIE IKONY KROWY NA HOVER, dziala powiekszenie tylko przez pierwsze 3s (opoznienie animacji jumping) */
     transform: scale(1.3);
     cursor: pointer;
+
 }
+
+/*PRZEJSCIE Z IKONY KROWY DO MENU WOLNIEJ*/
+
 
 main {
     position: relative;
@@ -60,6 +74,7 @@ main {
     width: 100%;
     background-color: #E6BC78;
     z-index: 2;
+
 }
 h1 {
     flex-basis: 10vh;
@@ -82,13 +97,13 @@ section div img {
     padding: 10px;
 }
 
-ul {
+footer {
     position: relative;
     width: 100%;
-    z-index:2;
+    line-height: 30vh;
 }
 
-li {
+footer.div {
     display: inline-block;
     width: 25%;
     float: left;
@@ -96,10 +111,11 @@ li {
     vertical-align: middle;
     background-color: #131313;
     line-height: 30vh;
+    z-index: 0;
 }
 
 button {
-    background-color: black;
+    background-color: yellow;
     color: white;
     border: 5px double #E6BC78;
     height: 60px;
@@ -114,12 +130,13 @@ button:hover {
     transform: scale(1.2);
 }
 
-div.instagram:hover {
+button.instagram:hover {
     cursor: pointer;
     transform: scale(1.2);
     color: white;
     transition: all 0.2s ease;
 }
+
 
 @keyframes black {
     0% {
