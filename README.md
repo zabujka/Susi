@@ -1,2 +1,2 @@
-Dodalam lightbox  na fotki
-zmieniony footer
+1. Added lightbox for the gallery of pictures
+2. Changed footer
