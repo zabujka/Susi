@@ -10,21 +10,22 @@ header {
     background-color: #131313;
     height: 100vh;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    z-index: 1;
+
 }
 
 header img.black {
     position: absolute;
-    height: 60%;
+    height: 60%; 
     /* TRANSLATE */
     top: 50%;
     left: 50%;
     transform: translate(-50%,-70%);
     animation: black 3s ease-out;
+    
 }
 
 p {
@@ -47,11 +48,14 @@ header img.little {
 }
 
 header img.little:hover {
-    /* NIE DZIALA POWIEKSZENIE IKONY KROWY NA HOVER, dziala powiekszenie tylko przez pierwsze 3s (opoznienie animacji jumping) 
-    oraz 2: PRZEJSCIE Z IKONY KROWY DO MENU WOLNIEJ*/
+    /* NIE DZIALA POWIEKSZENIE IKONY KROWY NA HOVER, dziala powiekszenie tylko przez pierwsze 3s (opoznienie animacji jumping) */
     transform: scale(1.3);
     cursor: pointer;
+
 }
+
+/*PRZEJSCIE Z IKONY KROWY DO MENU WOLNIEJ*/
+
 
 main {
     position: relative;
@@ -60,9 +64,8 @@ main {
     flex-direction: column;
     width: 100%;
     background-color: #E6BC78;
-    z-index: 2;
-}
 
+}
 h1 {
     flex-basis: 10vh;
     text-align: center;
@@ -88,40 +91,31 @@ footer {
     position: relative;
     width: 100%;
     line-height: 30vh;
+    background-color: #131313;
+    float: left;
+    text-align: center;
 }
 
 footer.div {
     display: inline-block;
-    width: 25%;
-    float: left;
-    text-align: center;
-    vertical-align: middle;
-    background-color: #131313;
-    line-height: 30vh;
-    z-index: 0;
 }
 
 button {
-    background-color: yellow;
+    background-color:black;
     color: white;
     border: 5px double #E6BC78;
     height: 60px;
-    width: 140px;
     letter-spacing: 1px;
+    width: 20%;
 }
 
 button:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-button.instagram:hover {
-    cursor: pointer;
-    transform: scale(1.2);
+    background-color:#E6BC78;
+    border: 5px double white;
     color: white;
-    transition: all 0.2s ease;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
 }
 
 
@@ -150,9 +144,10 @@ button.instagram:hover {
     100% {
         transform: translate(-50%, -70%) rotate(-360deg);
         opacity: 1;
+        /* scale(1.5)*/
+        /*PRZESUNIECIE FOTKI W PRAWO*/
     }
 }
-
 @keyframes krowka {
     0% {
         opacity: 0;
@@ -223,16 +218,11 @@ button.instagram:hover {
     section>div {
         flex-basis: 33%;
     }
-    ul {
-        font-size: 25px;
-    }
+
 }
 @media (max-width:1200px) {
     section>div {
         flex-basis: 33%;
-    }
-    ul {
-        font-size: 30px;
     }
     
 }
@@ -247,35 +237,16 @@ button.instagram:hover {
         padding: 5px;
         flex-basis: 49%;  
     }
-    ul {
-        font-size: 25px;
-    }
  }
 @media (max-width:640px) {
     section>div img {
         padding: 5px; /*NIE DZIALA MNIEJSZY PADDING TYLKO JEST 10PX*/ 
         flex-basis: 49%;
     }
-    ul {
-        font-size: 15px;
-    }
-    button {
-        border: 3px double #E6BC78;
-        height: 50px;
-        width: 100px;
-    }
  }
 @media (max-width:460px) {
     section>div img {
         padding: 5px; /*NIE DZIALA MNIEJSZY PADDING TYLKO JEST 10PX*/ 
         flex-basis: 48%;
-    }
-    ul {
-        font-size: 10px;
-    }
-    button {
-        border: 2px double #E6BC78;
-        height: 30px;
-        width: 70px;
     }
 }
